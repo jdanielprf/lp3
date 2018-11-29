@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
+    <h:head>
+        <title>Autenticação</title>
+    </h:head>
+    <h:body>
+        <h:form>
+            <h:messages showDetail="true"></h:messages>
+            <h:panelGrid columns="1">
+                <h:outputLabel for="email" value="E-mail"></h:outputLabel>
+                <h:inputText id="email" value="#{autenticacaoBean.email}" ></h:inputText>
+
+                <h:outputLabel for="senha" value="Senha"></h:outputLabel>
+                <h:inputSecret id="senha" value="#{autenticacaoBean.senha}"></h:inputSecret>
+                
+                <h:commandButton value="Entrar" action="#{autenticacaoBean.teste}"></h:commandButton>
+                <h:commandLink value="Recuperar senha" action="daniel"></h:commandLink>
+                <h:commandButton value="Cadastrar-se" ></h:commandButton>
+            </h:panelGrid>
+        </h:form>
+        
+    </h:body>
+</html>
+

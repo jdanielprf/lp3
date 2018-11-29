@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:i="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/facelets"
+      xmlns:c="http://xmlns.jcp.org/jsf/core">
+    <i:head>
+        <title>Facelet Title</title>
+    </i:head>
+    <i:body>
+        <i:form>
+            <i:panelGrid columns="3">
+                <i:outputLabel value="Nome:"></i:outputLabel>
+                <i:inputText id="campo-nome" value="#{usuarioBean.nome}" required="true">
+                
+                </i:inputText>
+                <i:message for="campo-nome" ></i:message>
+
+                <i:outputLabel value="Idade:"></i:outputLabel>
+                <i:inputText id="campo-idade" value="#{usuarioBean.idade}" >
+                 </i:inputText>
+                <i:message for="campo-idade" ></i:message>
+
+                <i:commandButton action="#{usuarioBean.salvar()}" value="Salvar"></i:commandButton>
+            </i:panelGrid>
+        </i:form>
+    </i:body>
+</html>
+
